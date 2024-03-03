@@ -1,16 +1,14 @@
 -- Description
--- Write a PostgreSQL query that selects film_id, the title and special_features columns from 
--- the film table in the DVD rental database, and returns only the films that have only "Trailers" 
--- and "Deleted Scenes" as their special features. special_features is the text[] type. It represents 
--- a one-dimensional array of values, where each value is of the text data type.
-
--- Notes
+-- Write a PostgreSQL query that selects film_id, the title and special_features columns from the film table 
+-- in the DVD rental database, and returns films that have either "Deleted Scenes" or "Behind the Scenes" as 
+-- a special feature, but not both - meaning that if there are "Deleted Scenes", there should not be "Behind 
+-- the Scenes" and vice versa. The query should also exclude films that have "Commentaries" as a special feature.
+-- Notes:
 -- for the sample tests, static dump of DVD Rental Sample Database is used, for the final solution - random tests.
 -- The result should be order by title alphabetically, if title is the same - then by film_id in asc order.
-
--- Schema
-
--- film table
+-- special_features is the text[] type. It represents a one-dimensional array of values, where each value is of the text data type.
+-- Schema:
+-- film table:
 -- Column            | Type      | Modifiers
 -- ------------------+-----------+-----------
 -- film_id           | integer   | not null
@@ -25,15 +23,14 @@
 -- rating            | varchar   | not null
 -- last_update       | timestamp | not null
 -- special_features  | text[]    | not null
-
 -- Desired Output
-
--- The desired output should look like this
+-- The desired output should look like this:
 -- film_id | title                             | special_features                       |
 -- --------+-----------------------------------+----------------------------------------|
 --    32   | A Shawshank Redemption            | {Trailers, Deleted Scenes}             | 
 --    14   | Monty Python and the Holy Grail   | {Trailers, Deleted Scenes}             |
 
-SELECT film_id, title, special_features FROM film 
-WHERE special_features = '{"Trailers", "Deleted Scenes"}' OR special_features = '{"Deleted Scenes", "Trailers"}' 
-ORDER BY title, film_id ASC;
+SELECT film_id, title, special_features FROM film
+WHERE ('Behind the Scenes' = ANY(special_features)) != ('Deleted Scenes' = ANY(special_features))
+AND NOT 'Commentaries' = ANY(special_features)
+ORDER BY title, film_id;
