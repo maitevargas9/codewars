@@ -8,5 +8,8 @@
 -- Return project and address columns only, as follows:
 -- output table schema project address
 -- Case should be maintained.
-
-SELECT LEFT(project, commits) as project, RIGHT(address, contributors) as address FROM repositories;
+SELECT
+    LEFT (project, commits) as project,
+    RIGHT (address, contributors) as address
+FROM
+    repositories;

@@ -28,18 +28,29 @@
 -- 98	dcieslak	9	Extreme case of Dunning-Kruger effect detected!
 -- 95	dinglemouse	9	Extreme case of Dunning-Kruger effect detected!
 -- 69	monadius	8	Extreme case of Dunning-Kruger effect detected!
-
-SELECT id, name, skill_overestimation,
-CASE
-    WHEN skill_overestimation < 3 THEN 'Mild case of overconfidence'
-    WHEN skill_overestimation < 6 THEN 'Moderate case of overconfidence'
-    WHEN skill_overestimation < 8 THEN 'Serious case of overconfidence'
-    ELSE 'Extreme case of Dunning-Kruger effect detected!'
-END AS overconfidence_category
-FROM (
-    SELECT id, name, perceived_skill_level, actual_skill_level,
-    perceived_skill_level - actual_skill_level AS skill_overestimation
-    FROM users
-    WHERE perceived_skill_level > actual_skill_level
-) AS skill_overestimation_query
-ORDER BY skill_overestimation DESC, id DESC;
+SELECT
+    id,
+    name,
+    skill_overestimation,
+    CASE
+        WHEN skill_overestimation < 3 THEN 'Mild case of overconfidence'
+        WHEN skill_overestimation < 6 THEN 'Moderate case of overconfidence'
+        WHEN skill_overestimation < 8 THEN 'Serious case of overconfidence'
+        ELSE 'Extreme case of Dunning-Kruger effect detected!'
+    END AS overconfidence_category
+FROM
+    (
+        SELECT
+            id,
+            name,
+            perceived_skill_level,
+            actual_skill_level,
+            perceived_skill_level - actual_skill_level AS skill_overestimation
+        FROM
+            users
+        WHERE
+            perceived_skill_level > actual_skill_level
+    ) AS skill_overestimation_query
+ORDER BY
+    skill_overestimation DESC,
+    id DESC;

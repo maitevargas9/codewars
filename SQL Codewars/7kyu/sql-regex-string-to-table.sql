@@ -10,5 +10,7 @@
 -- vowels in succession, you will see empty rows. A row should be created on each break, 
 -- whether there is content in the row or not.
 -- Regex is advised but not mandatory.
-
-SELECT regexp_split_to_table(text, 'a|e|i|o|u') AS results FROM random_string;
+SELECT
+    regexp_split_to_table (text, 'a|e|i|o|u') AS results
+FROM
+    random_string;

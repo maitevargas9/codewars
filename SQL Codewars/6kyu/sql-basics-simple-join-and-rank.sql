@@ -6,6 +6,16 @@
 -- sales table schema id people_id sale price
 -- You should return all people fields as well as the sale count as "sale_count" and the rank as "sale_rank".
 -- NOTE: Your solution should use pure SQL. Ruby is used within the test cases to do the actual testing.
-
-SELECT people.id, people.name, count(sales.id) AS sale_count, rank () OVER (ORDER BY count(sales.id)) sale_rank
-FROM people JOIN sales ON people.id = people_id GROUP BY people.id;
+SELECT
+    people.id,
+    people.name,
+    count(sales.id) AS sale_count,
+    rank() OVER (
+        ORDER BY
+            count(sales.id)
+    ) sale_rank
+FROM
+    people
+    JOIN sales ON people.id = people_id
+GROUP BY
+    people.id;

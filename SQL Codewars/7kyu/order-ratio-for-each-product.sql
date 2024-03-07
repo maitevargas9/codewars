@@ -29,5 +29,13 @@
 --          2  |     1 | 0.1667e2
 --          3  |     3 | 0.5e2
 
-SELECT product_id, COUNT(order_id) AS count, ROUND(COUNT(quantity) / (select COUNT(quantity)  * 0.01 FROM orders)::decimal , 2) AS ratio
-FROM orders GROUP BY product_id ORDER BY product_id ASC;
+SELECT 
+   product_id, 
+   COUNT(order_id) AS count, 
+   ROUND(COUNT(quantity) / (select COUNT(quantity)  * 0.01 FROM orders)::decimal , 2) AS ratio
+FROM 
+   orders 
+GROUP BY
+   product_id 
+ORDER BY 
+   product_id ASC;

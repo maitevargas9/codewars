@@ -7,10 +7,13 @@
 -- example: [45, 120] --> [3, 8]
 -- All numerators and denominators will be positive integers.
 -- Note: This is an introductory Kata for a series... coming soon!
-
-SELECT numerator, denominator,
-       numerator / GCD(numerator, denominator) AS reduced_numerator,
-       denominator / GCD(numerator, denominator) AS reduced_denominator
-FROM fraction
-ORDER BY numerator ASC,
-         denominator ASC;
+SELECT
+    numerator,
+    denominator,
+    numerator / GCD (numerator, denominator) AS reduced_numerator,
+    denominator / GCD (numerator, denominator) AS reduced_denominator
+FROM
+    fraction
+ORDER BY
+    numerator ASC,
+    denominator ASC;

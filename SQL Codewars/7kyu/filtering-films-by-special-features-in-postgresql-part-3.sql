@@ -29,8 +29,15 @@
 -- --------+-----------------------------------+----------------------------------------|
 --    32   | A Shawshank Redemption            | {Trailers, Deleted Scenes}             | 
 --    14   | Monty Python and the Holy Grail   | {Trailers, Deleted Scenes}             |
-
-SELECT film_id, title, special_features FROM film
-WHERE ('Behind the Scenes' = ANY(special_features)) != ('Deleted Scenes' = ANY(special_features))
-AND NOT 'Commentaries' = ANY(special_features)
-ORDER BY title, film_id;
+SELECT
+    film_id,
+    title,
+    special_features
+FROM
+    film
+WHERE
+    ('Behind the Scenes' = ANY (special_features)) != ('Deleted Scenes' = ANY (special_features))
+    AND NOT 'Commentaries' = ANY (special_features)
+ORDER BY
+    title,
+    film_id;

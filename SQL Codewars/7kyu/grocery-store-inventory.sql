@@ -7,5 +7,14 @@
 -- Order the results by product id
 -- products table schema id name price stock producent
 -- results table schema id name stock
-
-SELECT id, name, stock FROM products WHERE producent ='CompanyA' AND stock <= 2 ORDER BY id;
+SELECT
+    id,
+    name,
+    stock
+FROM
+    products
+WHERE
+    producent = 'CompanyA'
+    AND stock <= 2
+ORDER BY
+    id;

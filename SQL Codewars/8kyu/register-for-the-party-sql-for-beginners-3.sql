@@ -6,6 +6,12 @@
 -- Since alcohol will be served, you can only attend if you are 21 or older
 -- You can't attend if the attending column returns anything but true
 -- NOTE Your solution should use pure SQL. Ruby is used within the test cases just to validate your answer.
+INSERT INTO
+    participants ("name", "age", "attending")
+VALUES
+    ('Maite', 26, true);
 
-INSERT INTO participants ("name", "age", "attending") VALUES ('Maite', 26, true); 
-SELECT * FROM participants;
+SELECT
+    *
+FROM
+    participants;

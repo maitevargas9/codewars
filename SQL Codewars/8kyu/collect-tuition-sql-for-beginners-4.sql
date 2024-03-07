@@ -5,5 +5,9 @@
 -- The list should include all the data available about these students.
 -- students table schema name (string) age (integer) semester (integer) mentor (string) tuition_received (Boolean)
 -- NOTE Your solution should use pure SQL. Ruby is used within the test cases just to validate your answer.
-
-SELECT * FROM students WHERE tuition_received = false;
+SELECT
+    *
+FROM
+    students
+WHERE
+    tuition_received = false;

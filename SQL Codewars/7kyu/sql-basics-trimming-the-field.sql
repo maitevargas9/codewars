@@ -5,5 +5,11 @@
 -- You must return a table with the format as follows:
 -- output schema id name characteristic
 -- Order by id
-
-SELECT id, name, split_part(characteristics, ',', 1) AS characteristic FROM monsters ORDER BY id;
+SELECT
+    id,
+    name,
+    split_part (characteristics, ',', 1) AS characteristic
+FROM
+    monsters
+ORDER BY
+    id;

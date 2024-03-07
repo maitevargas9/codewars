@@ -8,5 +8,7 @@
 -- 0 <= h <= 23
 -- 0 <= m <= 59
 -- 0 <= s <= 59
-
-SELECT (3600 * h + 60 * m + s) * 1000 AS res FROM past;
+SELECT
+    (3600 * h + 60 * m + s) * 1000 AS res
+FROM
+    past;

@@ -9,8 +9,15 @@
 --   }
 --   return [];
 -- }
-
-SELECT film_id, title, special_features
-FROM film
-WHERE  'Trailers' = Any(special_features) AND 'Deleted Scenes' = Any(special_features)
-ORDER BY title, film_id ASC;
+SELECT
+    film_id,
+    title,
+    special_features
+FROM
+    film
+WHERE
+    'Trailers' = Any (special_features)
+    AND 'Deleted Scenes' = Any (special_features)
+ORDER BY
+    title,
+    film_id ASC;

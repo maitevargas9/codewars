@@ -21,5 +21,11 @@
 -- |  3 | createNews   |
 
 PREPARE find_sections(int) AS
-SELECT id, section_name FROM section_access 
-WHERE ','||user_access||',' LIKE '%,' || $1::text || ',%' ORDER BY id ASC;
+SELECT 
+   id, section_name 
+FROM 
+   section_access 
+WHERE 
+   ','||user_access||',' LIKE '%,' || $1::text || ',%' 
+ORDER BY 
+   id ASC;

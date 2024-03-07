@@ -27,5 +27,12 @@
 --          1  | product1     |                 4
 --          1  | product1     |                 4          
 -- The output should be sorted by product_id in descending order.
-
-SELECT product_id, product_name, quantity_in_stock FROM products CROSS JOIN generate_series(1, quantity_in_stock) ORDER BY product_id DESC;
+SELECT
+    product_id,
+    product_name,
+    quantity_in_stock
+FROM
+    products
+    CROSS JOIN generate_series (1, quantity_in_stock)
+ORDER BY
+    product_id DESC;

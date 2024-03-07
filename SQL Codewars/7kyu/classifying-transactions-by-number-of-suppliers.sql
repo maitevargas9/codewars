@@ -27,10 +27,15 @@
 -- +----------------+------------+-----------+
 -- |      1         | 2023-07-17 | SupplierA |
 -- |      2         | 2023-07-17 | Several   |
-
-SELECT transaction_id, date,
-  CASE 
-  WHEN COUNT(DISTINCT supplier) > 1 THEN 'Several'
-  ELSE MIN(supplier)
+SELECT
+  transaction_id,
+  date,
+  CASE
+    WHEN COUNT(DISTINCT supplier) > 1 THEN 'Several'
+    ELSE MIN(supplier)
   END AS supplier
-FROM transaction JOIN transaction_content USING (transaction_id) GROUP BY transaction_id;
+FROM
+  transaction
+  JOIN transaction_content USING (transaction_id)
+GROUP BY
+  transaction_id;

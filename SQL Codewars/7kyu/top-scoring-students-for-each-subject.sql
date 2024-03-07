@@ -25,24 +25,29 @@
 -- {Paul,Lukas}	  English	    100
 -- {George}	      History	    98
 -- {John}	      Math	        95
-
 SELECT
-  ARRAY_AGG(student_name ORDER BY s.student_id) AS student_names,
+  ARRAY_AGG (
+    student_name
+    ORDER BY
+      s.student_id
+  ) AS student_names,
   su.subject_name AS subject_name,
   MAX(m.mark_rate) AS mark_rate
-FROM students AS s
-JOIN marks AS m
-ON s.student_id = m.student_id
-JOIN subjects AS su 
-ON m.subject_id = su.subject_id
-WHERE 
-  (m.subject_id, m.mark_rate) IN
-    (
-     SELECT
-       marks.subject_id,
-       MAX(marks.mark_rate) 
-      FROM marks
-      GROUP BY marks.subject_id 
-     )
-GROUP BY su.subject_name
-ORDER BY su.subject_name ASC;
+FROM
+  students AS s
+  JOIN marks AS m ON s.student_id = m.student_id
+  JOIN subjects AS su ON m.subject_id = su.subject_id
+WHERE
+  (m.subject_id, m.mark_rate) IN (
+    SELECT
+      marks.subject_id,
+      MAX(marks.mark_rate)
+    FROM
+      marks
+    GROUP BY
+      marks.subject_id
+  )
+GROUP BY
+  su.subject_name
+ORDER BY
+  su.subject_name ASC;

@@ -4,5 +4,10 @@
 -- people table schema id name age
 -- select table schema age [group by] people_count (people count)
 -- NOTE Your solution should use pure SQL. Ruby is used within the test cases to do the actual testing.
-
-SELECT age, count(id) AS people_count FROM people GROUP BY age;
+SELECT
+    age,
+    count(id) AS people_count
+FROM
+    people
+GROUP BY
+    age;

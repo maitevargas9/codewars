@@ -7,5 +7,10 @@
 -- you are given a table 'cubes' with column 'n' (bigint)
 -- return a query with column 'n' and your result in a column named 'res' (bigint)
 -- sort results by column 'n' ascending
-
-SELECT n, (n * (n + 1) / 2) * (n * (n + 1) / 2) as res FROM cubes ORDER BY n ASC;
+SELECT
+    n,
+    (n * (n + 1) / 2) * (n * (n + 1) / 2) as res
+FROM
+    cubes
+ORDER BY
+    n ASC;

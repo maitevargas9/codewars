@@ -10,11 +10,15 @@
 -- Note The data is loaded from the live leaderboard, this means values will change but also could cause the kata 
 -- to time out retreiving the information.
 -- NOTE: You're solution should use pure SQL. Ruby is used within the test cases to do the actual testing.
-
 SELECT
-  RANK() OVER (ORDER BY SUM(points) DESC) AS rank,
-  COALESCE(NULLIF(clan,''), '[no clan specified]') AS clan,
+  RANK() OVER (
+    ORDER BY
+      SUM(points) DESC
+  ) AS rank,
+  COALESCE(NULLIF(clan, ''), '[no clan specified]') AS clan,
   SUM(points) AS total_points,
   COUNT(name) AS total_people
-FROM people
-GROUP BY clan;
+FROM
+  people
+GROUP BY
+  clan;

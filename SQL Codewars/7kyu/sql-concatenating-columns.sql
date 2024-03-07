@@ -5,5 +5,7 @@
 -- containing the full title of the person (concatenate all columns together except id), as follows
 -- output table schema title
 -- Don't forget to add spaces.
-
-SELECT CONCAT(prefix, ' ', first, ' ', last, ' ', suffix) AS title FROM names;
+SELECT
+    CONCAT (prefix, ' ', first, ' ', last, ' ', suffix) AS title
+FROM
+    names;

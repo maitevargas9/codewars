@@ -6,6 +6,21 @@
 -- (us/eu)sales table schema id name price card_name card_number transaction_date
 -- resultant table schema location (EU for eusales and US for ussales) id name price (greater than 50.00) card_name card_number transaction_date
 -- NOTE: Your solution should use pure SQL. Ruby is used within the test cases to do the actual testing.
-
-SELECT * FROM (SELECT 'US' AS location, * FROM ussales UNION ALL SELECT 'EU' AS location, * FROM eusales) 
-AS sales WHERE price > 50.00;
+SELECT
+    *
+FROM
+    (
+        SELECT
+            'US' AS location,
+            *
+        FROM
+            ussales
+        UNION ALL
+        SELECT
+            'EU' AS location,
+            *
+        FROM
+            eusales
+    ) AS sales
+WHERE
+    price > 50.00;

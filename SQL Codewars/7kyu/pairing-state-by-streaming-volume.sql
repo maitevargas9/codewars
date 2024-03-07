@@ -21,7 +21,6 @@
 -- For the example above, the desired output should look like this:
 -- state_a	state_b	difference
 -- NC	    SC	    570
-
 SELECT
     ss1.state AS state_a,
     ss2.state AS state_b,

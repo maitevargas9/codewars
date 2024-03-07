@@ -9,10 +9,28 @@
 -- (don't worry, for simplicity's sake 'brave' and 'studious' will only appear in quality1, 
 -- and 'cunning' and 'intelligent' will only appear in quality2.)
 -- Return the id, name, quality1 and quality2 of all the students who'll be accepted, ordered by ascending id.
-
-SELECT * FROM students
-         WHERE ((quality1 = 'evil' AND quality2 = 'cunning')
-         OR (quality1 = 'brave' AND quality2 != 'evil')
-         OR (quality1 = 'studious' OR quality2 = 'intelligent')
-         OR (quality1 = 'hufflepuff' OR quality2 = 'hufflepuff'))
-         ORDER BY id;
+SELECT
+    *
+FROM
+    students
+WHERE
+    (
+        (
+            quality1 = 'evil'
+            AND quality2 = 'cunning'
+        )
+        OR (
+            quality1 = 'brave'
+            AND quality2 != 'evil'
+        )
+        OR (
+            quality1 = 'studious'
+            OR quality2 = 'intelligent'
+        )
+        OR (
+            quality1 = 'hufflepuff'
+            OR quality2 = 'hufflepuff'
+        )
+    )
+ORDER BY
+    id;

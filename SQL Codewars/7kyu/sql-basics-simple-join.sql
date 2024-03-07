@@ -3,13 +3,13 @@
 -- products table schema: id name isbn company_id price
 -- companies table schema: id name
 -- You should return all product fields as well as the company name as "company_name".
-
-SELECT  p.id,
-        p.name,
-        p.isbn,
-        p.company_id,
-        p.price,
-        c.name AS company_name
-FROM products AS p
-LEFT JOIN companies AS c
-ON p.company_id = c.id;
+SELECT
+    p.id,
+    p.name,
+    p.isbn,
+    p.company_id,
+    p.price,
+    c.name AS company_name
+FROM
+    products AS p
+    LEFT JOIN companies AS c ON p.company_id = c.id;

@@ -20,9 +20,18 @@
 -- 33	    Rustic Silk Watch	        false	    90 days and 0 hours ago
 -- 32	    Lightweight Leather Gloves	true	    89 days and 23 hours ago
 -- 30	    Ergonomic Iron Shoes	    true	    57 days and 23 hours ago
-
-SELECT deal_id, deal_name,
-current_timestamp - max(occurred_at) <= interval '90 days' as is_active,
-to_char(now() - max(occurred_at), 'FMDD "days and" FMHH24 "hours ago"') as last_login
-FROM deals JOIN deal_login_fact USING (deal_id) 
-GROUP BY deal_id ORDER BY deal_id DESC;
+SELECT
+    deal_id,
+    deal_name,
+    current_timestamp - max(occurred_at) <= interval '90 days' as is_active,
+    to_char (
+        now () - max(occurred_at),
+        'FMDD "days and" FMHH24 "hours ago"'
+    ) as last_login
+FROM
+    deals
+    JOIN deal_login_fact USING (deal_id)
+GROUP BY
+    deal_id
+ORDER BY
+    deal_id DESC;

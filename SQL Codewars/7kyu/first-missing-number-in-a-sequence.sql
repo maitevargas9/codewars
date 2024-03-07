@@ -19,9 +19,16 @@
 --       3
 -- Notes
 -- The values in the num column will be unique
-
-SELECT num + 1 AS missing_number FROM data
-WHERE num + 1 NOT IN (
-  SELECT num FROM data
-)
-LIMIT 1;
+SELECT
+  num + 1 AS missing_number
+FROM
+  data
+WHERE
+  num + 1 NOT IN (
+    SELECT
+      num
+    FROM
+      data
+  )
+LIMIT
+  1;

@@ -6,9 +6,14 @@
 -- strength, after taking these changes into account, is greater than or equal to 40, ordered from strongest to weakest.
 -- pokemon schema id pokemon_name element_id str
 -- multipliers schema id element multiplier
-
-SELECT pokemon_name, str * multiplier AS modifiedStrength, element
-FROM pokemon p 
-JOIN multipliers m ON element_id = m.id
-WHERE str * multiplier >= 40
-ORDER BY modifiedStrength DESC;
+SELECT
+    pokemon_name,
+    str * multiplier AS modifiedStrength,
+    element
+FROM
+    pokemon p
+    JOIN multipliers m ON element_id = m.id
+WHERE
+    str * multiplier >= 40
+ORDER BY
+    modifiedStrength DESC;

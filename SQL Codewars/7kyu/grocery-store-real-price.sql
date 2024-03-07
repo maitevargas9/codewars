@@ -10,4 +10,12 @@
 -- Products table schema id (int) name (string) price (float) stock (int) weight (float) producer (string) country (string)
 -- Results table schema: name (string) weight (float) price (float) price_per_kg (float)
 
-SELECT name, weight, price, ROUND((price*1000/weight)::numeric, 2)::float AS price_per_kg FROM products ORDER BY price_per_kg, name ASC;
+SELECT 
+   name, 
+   weight, 
+   price, 
+   ROUND((price*1000/weight)::numeric, 2)::float AS price_per_kg 
+FROM 
+   products 
+ORDER BY 
+   price_per_kg, name ASC;

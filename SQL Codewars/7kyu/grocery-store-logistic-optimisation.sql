@@ -11,7 +11,13 @@
 -- Note: there has been a critical change in the description and the column names long after the approval/publication 
 -- of the kata so don't be surprised if you see solutions with different column names once you solved the kata 
 -- (solutions weren't revalidated after the change because their was already too much of them).
-
-SELECT count(name) AS count_products_types, producer 
-FROM products GROUP BY producer
-ORDER BY count_products_types DESC, producer ASC;
+SELECT
+    count(name) AS count_products_types,
+    producer
+FROM
+    products
+GROUP BY
+    producer
+ORDER BY
+    count_products_types DESC,
+    producer ASC;

@@ -10,5 +10,8 @@
 -- 16 17 18 19 20 [21]
 -- e.g. If 4 is given: 1 + 3 + 6 + 10 = 20.
 -- Triangular Numbers cannot be negative so return 0 if a negative number is given.
-
-SELECT n, GREATEST(0, (n * (n + 1) * (n + 2) / 6)) AS res FROM sumtriangular;
+SELECT
+    n,
+    GREATEST (0, (n * (n + 1) * (n + 2) / 6)) AS res
+FROM
+    sumtriangular;

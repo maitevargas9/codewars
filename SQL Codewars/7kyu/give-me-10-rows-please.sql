@@ -14,6 +14,23 @@
 -- If there are more than 10 rows in the table, your query should only return the first 10 rows.
 -- The returned rows should be ordered by priority: rows from the original table first, followed by the extra rows, if any.
 -- The rows from the original table should be sorted in ascending order according to column a
-
-SELECT a, b FROM (SELECT * FROM sample_table ORDER BY a)  AS original
-UNION ALL SELECT 0, '-' FROM generate_series(1,10) LIMIT 10;
+SELECT
+    a,
+    b
+FROM
+    (
+        SELECT
+            *
+        FROM
+            sample_table
+        ORDER BY
+            a
+    ) AS original
+UNION ALL
+SELECT
+    0,
+    '-'
+FROM
+    generate_series (1, 10)
+LIMIT
+    10;
