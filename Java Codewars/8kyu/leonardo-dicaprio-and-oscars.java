@@ -12,18 +12,16 @@ if it was over 88 you should return "Leo got one already!"
 */
 
 public class Kata {
+
   public static String leo(final int oscar) {
     var result = "";
     if (oscar == 88) {
       result = "Leo finally won the oscar! Leo is happy";
-    }
-    else if (oscar == 86) {
+    } else if (oscar == 86) {
       result = "Not even for Wolf of wallstreet?!";
-    }
-    else if (oscar != 88 && oscar != 86 && oscar < 88) {
+    } else if (oscar != 88 && oscar != 86 && oscar < 88) {
       result = "When will you give Leo an Oscar?";
-    }
-    else if (oscar > 88) {
+    } else if (oscar > 88) {
       result = "Leo got one already!";
     }
     return result;

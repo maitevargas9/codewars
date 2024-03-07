@@ -8,6 +8,8 @@ For example, for [1, 2, 2] it should return 9 because 12 + 22 + 22 = 912 + 22 + 
 
 export function squareSum(numbers: number[]): number {
   let sum = 0;
-  numbers.forEach((num) => { sum += Math.pow(num,2) });
+  numbers.forEach((num) => {
+    sum += Math.pow(num, 2);
+  });
   return sum;
 }

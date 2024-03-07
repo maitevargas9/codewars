@@ -5,9 +5,9 @@ Example : n=5 --> [5,4,3,2,1]
 */
 
 export const reverseSeq = (n: number): number[] => {
-    let result: number[] = [];
-    for (let i = n; i > 0; i--) {
-        result.push(i);
-    }
-    return result;
+  let result: number[] = [];
+  for (let i = n; i > 0; i--) {
+    result.push(i);
+  }
+  return result;
 };

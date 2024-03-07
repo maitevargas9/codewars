@@ -14,5 +14,5 @@ Zero (0) is not checked for any specific sign. Negative zeros make no mathematic
 */
 
 export const makeNegative = (num: number): number => {
-  return num === 0 ? 0 : Math.sign(num) === 1 ? num * (-1) : num;
+  return num === 0 ? 0 : Math.sign(num) === 1 ? num * -1 : num;
 };

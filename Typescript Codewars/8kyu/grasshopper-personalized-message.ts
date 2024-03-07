@@ -13,8 +13,7 @@ export function greet(name: string, owner: string): string {
   let message = "";
   if (name === owner) {
     message = "Hello boss";
-  }
-  else {
+  } else {
     message = "Hello guest";
   }
   return message;

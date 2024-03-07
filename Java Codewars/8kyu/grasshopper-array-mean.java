@@ -16,6 +16,7 @@ For an example list of 1, 3, 5, 7
 */
 
 public class GrassHopper {
+
   public static int findAverage(int[] nums) {
     int result = 0;
     for (int i = 0; i < nums.length; i++) {

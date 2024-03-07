@@ -11,5 +11,5 @@ array_diff({1, 2, 2, 2, 3}, 5, {2}, 1, *z) == {1, 3} (z == 2)
 */
 
 export function arrayDiff(a: number[], b: number[]): number[] {
-  return a.filter(item => b.indexOf(item) < 0);
+  return a.filter((item) => b.indexOf(item) < 0);
 }

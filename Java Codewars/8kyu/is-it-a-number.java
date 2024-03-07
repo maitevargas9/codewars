@@ -19,12 +19,13 @@ isDigit("zero")
 */
 
 public class MyUtilities {
+
   public boolean isDigit(String s) {
-    try {  
+    try {
       double num = Double.parseDouble(s.trim());
       return true;
-    } catch(NumberFormatException e) {  
-      return false;  
-    } 
+    } catch (NumberFormatException e) {
+      return false;
+    }
   }
 }

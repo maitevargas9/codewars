@@ -26,6 +26,12 @@ expressionsMatter(1,2,3)  ==>  return 9
 */
 
 export function expressionsMatter(a: number, b: number, c: number): number {
-  let output: number[] = [a * (b + c), a * b * c, a + b * c, (a + b) * c, a + b + c];
+  let output: number[] = [
+    a * (b + c),
+    a * b * c,
+    a + b * c,
+    (a + b) * c,
+    a + b + c,
+  ];
   return Math.max(...output);
 }

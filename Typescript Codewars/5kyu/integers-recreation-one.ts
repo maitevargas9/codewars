@@ -10,7 +10,8 @@ Find all integers between m and n (m and n integers with 1 <= m <= n)
 such that the sum of their squared divisors is itself a square.
 
 We will return an array of subarrays or of tuples (in C an array of Pair) or a string. 
-The subarrays (or tuples or Pairs) will have two elements: first the number the squared divisors of which is a square and then the sum of the squared divisors.
+The subarrays (or tuples or Pairs) will have two elements: first the number the squared 
+divisors of which is a square and then the sum of the squared divisors.
 
 Example
 list_squared(1, 250) --> [[1, 1], [42, 2500], [246, 84100]]
@@ -26,10 +27,10 @@ export const listSquared = (m: number, n: number): number[][] => {
   let result = [];
   for (let i = m; i <= n; i++) {
     var sum = 0;
-    for (let j = 1; j <= i/2; j++) {
-       i % j == 0 && (sum += j * j);
-    } 
+    for (let j = 1; j <= i / 2; j++) {
+      i % j == 0 && (sum += j * j);
+    }
     Math.sqrt(sum + i * i) % 1 == 0 && result.push([i, sum + i * i]);
   }
   return result;
-}
+};

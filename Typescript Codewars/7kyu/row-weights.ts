@@ -29,5 +29,12 @@ The first element 80 is the total weight of team 1, and the second element 0 is 
 */
 
 export function rowWeights(arr: number[]) {
-  return [arr.filter((i, index) => index % 2 === 0).reduce((result, i) => result + i, 0), arr.filter((i, index) => index % 2 !== 0).reduce((result, i) => result + i, 0)];
+  return [
+    arr
+      .filter((i, index) => index % 2 === 0)
+      .reduce((result, i) => result + i, 0),
+    arr
+      .filter((i, index) => index % 2 !== 0)
+      .reduce((result, i) => result + i, 0),
+  ];
 }

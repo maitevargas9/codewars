@@ -15,11 +15,16 @@ Examples
 '0' and '?' returns -1
 */
 
-export function sameCase(a : string, b : string): number {
-  if (a.toLowerCase() === a.toUpperCase() || b.toLowerCase() === b.toUpperCase()) {
+export function sameCase(a: string, b: string): number {
+  if (
+    a.toLowerCase() === a.toUpperCase() ||
+    b.toLowerCase() === b.toUpperCase()
+  ) {
     return -1;
-  }
-  else if (a === a.toLowerCase() && b === b.toLowerCase() || a === a.toUpperCase() && b === b.toUpperCase()) {
+  } else if (
+    (a === a.toLowerCase() && b === b.toLowerCase()) ||
+    (a === a.toUpperCase() && b === b.toUpperCase())
+  ) {
     return 1;
   }
   return 0;

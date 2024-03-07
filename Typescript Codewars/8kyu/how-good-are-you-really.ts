@@ -12,10 +12,15 @@ Note
 Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
 */
 
-export function betterThanAverage(classPoints: number[], yourPoints: number): boolean {
+export function betterThanAverage(
+  classPoints: number[],
+  yourPoints: number
+): boolean {
   let sum = 0;
   let avg = 0;
-  classPoints.forEach(num => { sum += num });
+  classPoints.forEach((num) => {
+    sum += num;
+  });
   avg = sum / classPoints.length;
   return yourPoints > avg ? true : false;
 }

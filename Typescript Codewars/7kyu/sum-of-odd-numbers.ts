@@ -8,5 +8,5 @@ Calculate the sum of the numbers in the nth row of this triangle (starting at in
 */
 
 export function rowSumOddNumbers(n: number): number {
-  return Math.pow(n,3);
+  return Math.pow(n, 3);
 }

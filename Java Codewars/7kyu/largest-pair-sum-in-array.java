@@ -12,6 +12,7 @@ Input sequence contains minimum two elements and every element is an integer.
 import java.util.*;
 
 public class Solution {
+
   public static int largestPairSum(int[] numbers) {
     int maxSum = Integer.MIN_VALUE;
     for (int i = 0; i < numbers.length; i++) {

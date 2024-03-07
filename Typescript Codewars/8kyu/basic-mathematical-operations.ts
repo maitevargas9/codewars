@@ -13,19 +13,20 @@ Examples(Operator, value1, value2) --> output
 ('/', 49, 7) --> 7
 */
 
-export function basicOp(operation: string, value1: number, value2: number): number {
-    let num = 0;
-    if (operation === '+') {
-        num = value1 + value2;
-    }
-    else if (operation === '-') {
-        num = value1 - value2;
-    }
-    else if (operation === '*') {
-        num = value1 * value2;
-    }
-    else if (operation === '/') {
-        num = value1 / value2;
-    }
-    return num;
+export function basicOp(
+  operation: string,
+  value1: number,
+  value2: number
+): number {
+  let num = 0;
+  if (operation === "+") {
+    num = value1 + value2;
+  } else if (operation === "-") {
+    num = value1 - value2;
+  } else if (operation === "*") {
+    num = value1 * value2;
+  } else if (operation === "/") {
+    num = value1 / value2;
+  }
+  return num;
 }

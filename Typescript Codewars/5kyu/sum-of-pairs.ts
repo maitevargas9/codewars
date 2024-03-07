@@ -10,7 +10,7 @@ Negative numbers and duplicate numbers can and will appear.
 NOTE: There will also be lists tested of lengths upwards of 10,000,000 elements. Be sure your code doesn't time out.
 */
 
-export function sumPairs(ints: number[], s: number): [number, number] | void {  
+export function sumPairs(ints: number[], s: number): [number, number] | void {
   if (ints.length < 2) {
     return undefined;
   }
@@ -19,7 +19,7 @@ export function sumPairs(ints: number[], s: number): [number, number] | void {
   for (let i = 1; i < ints.length; ++i) {
     let needed = s - ints[i];
     if (intSet.has(needed)) {
-      return [needed,ints[i]];
+      return [needed, ints[i]];
     }
     intSet.add(ints[i]);
   }

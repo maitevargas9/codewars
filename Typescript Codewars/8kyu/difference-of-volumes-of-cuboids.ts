@@ -7,7 +7,10 @@ Your function will be tested with pre-made examples as well as random ones.
 If you can, try writing it in one line of code.
 */
 
-export function findDifference(a: [number, number, number], b: [number, number, number]): number {
+export function findDifference(
+  a: [number, number, number],
+  b: [number, number, number]
+): number {
   let volumeA = a[0] * a[1] * a[2];
   let volumeB = b[0] * b[1] * b[2];
   return Math.max(volumeA, volumeB) - Math.min(volumeA, volumeB);

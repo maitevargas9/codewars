@@ -16,6 +16,10 @@ If your holiday will cost £1000, you would have to purchase 166.66 bottles to s
 All inputs will be integers. Please return an integer. Round down.
 */
 
-export function dutyFree(normPrice: number, discount: number, hol: number): number {
-  return Math.floor(hol / normPrice / discount * 100);
+export function dutyFree(
+  normPrice: number,
+  discount: number,
+  hol: number
+): number {
+  return Math.floor((hol / normPrice / discount) * 100);
 }

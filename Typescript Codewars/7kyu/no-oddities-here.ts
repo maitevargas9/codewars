@@ -6,5 +6,5 @@ All values in the array will be integers. Return the good values in the order th
 */
 
 export function noOdds(values: number[]): number[] {
-  return values.filter(x => x % 2 === 0);
+  return values.filter((x) => x % 2 === 0);
 }

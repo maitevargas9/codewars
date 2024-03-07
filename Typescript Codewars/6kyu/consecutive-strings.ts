@@ -1,7 +1,8 @@
 /*
 Description 
 
-You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+You are given an array(list) strarr of strings and an integer k. Your task is to return the first 
+longest string consisting of k consecutive strings taken in the array.
 
 Examples:
 strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2
@@ -28,7 +29,7 @@ consecutive strings: follow one after another without an interruption
 export function longestConsec(strarr: string[], k: number): string {
   var longest = "";
   for (let i = 0; k > 0 && i <= strarr.length - k; i++) {
-    let tempStr = strarr.slice(i, i+k).join("");
+    let tempStr = strarr.slice(i, i + k).join("");
     if (tempStr.length > longest.length) {
       longest = tempStr;
     }

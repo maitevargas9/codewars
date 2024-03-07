@@ -19,6 +19,6 @@ export class Kata {
     let arr = numbers.split(" ").map((c) => parseInt(c));
     let max = Math.max(...arr);
     let min = Math.min(...arr);
-    return max + ' ' + min;
+    return max + " " + min;
   }
 }

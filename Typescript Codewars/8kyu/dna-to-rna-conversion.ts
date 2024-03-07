@@ -13,5 +13,5 @@ The input string can be of arbitrary length - in particular, it may be empty. Al
 */
 
 export function DNAtoRNA(dna: string): string {
-  return dna.replace(/T/g, 'U');
+  return dna.replace(/T/g, "U");
 }

@@ -17,12 +17,14 @@ You will be given a stocklist (e.g. : L) and a list of categories in capital let
 M = {"A", "B", "C", "W"} 
 or
 M = ["A", "B", "C", "W"] or ...
-and your task is to find all the books of L with codes belonging to each category of M and to sum their quantity according to each category.
+and your task is to find all the books of L with codes belonging to each category of M and to sum their quantity according 
+to each category.
 
 For the lists L and M of example you have to return the string (in Haskell/Clojure/Racket/Prolog a list of pairs):
 
 (A : 20) - (B : 114) - (C : 50) - (W : 0)
-where A, B, C, W are the categories, 20 is the sum of the unique book of category A, 114 the sum corresponding to "BKWRK" and "BTSQZ", 50 corresponding to "CDXEF" and 0 to category 'W' since there are no code beginning with W.
+where A, B, C, W are the categories, 20 is the sum of the unique book of category A, 114 the sum corresponding 
+to "BKWRK" and "BTSQZ", 50 corresponding to "CDXEF" and 0 to category 'W' since there are no code beginning with W.
 
 If L or M are empty return string is "" (Clojure/Racket/Prolog should return an empty array/list instead).
 
@@ -32,7 +34,7 @@ See "Samples Tests" for the return.
 */
 
 function stockList(listOfArt, listOfCat) {
-  if(listOfArt.length === 0 || listOfCat.length === 0) {
+  if (listOfArt.length === 0 || listOfCat.length === 0) {
     return '';
   }
   const arrs = [];
@@ -41,7 +43,7 @@ function stockList(listOfArt, listOfCat) {
   for (let i = 0; i < listOfCat.length; i++) {
     L = listOfCat[i];
     N = 0;
-    for (let j=0; j < listOfArt.length; j++) {
+    for (let j = 0; j < listOfArt.length; j++) {
       if (listOfArt[j][0] === listOfCat[i]) {
         N += listOfArt[j].match(/[\d]+/g) * 1;
       }

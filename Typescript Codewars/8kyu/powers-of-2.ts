@@ -12,7 +12,7 @@ n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
 export function powersOfTwo(n: number): number[] {
   let arr: number[] = [];
   for (let i = 0; i <= n; i++) {
-    arr.push(Math.pow(2,i));
+    arr.push(Math.pow(2, i));
   }
   return arr;
 }

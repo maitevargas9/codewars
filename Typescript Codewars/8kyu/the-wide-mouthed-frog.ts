@@ -11,5 +11,5 @@ an alligator (case-insensitive) return small otherwise return wide.
 */
 
 export function mouthSize(animal: string): string {
-  return animal.toLowerCase() === 'alligator' ? 'small' : 'wide';
+  return animal.toLowerCase() === "alligator" ? "small" : "wide";
 }

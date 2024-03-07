@@ -11,7 +11,8 @@ This example will return the string Hello, John Smith! Welcome to Phoenix, Arizo
 import org.apache.commons.lang3.StringUtils;
 
 public class Hello {
-  public String sayHello(String [] name, String city, String state) {
+
+  public String sayHello(String[] name, String city, String state) {
     String str = StringUtils.join(name, " ");
     return "Hello, " + str + "! Welcome to " + city + ", " + state + "!";
   }

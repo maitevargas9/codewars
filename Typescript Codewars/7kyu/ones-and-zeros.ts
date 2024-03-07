@@ -19,4 +19,4 @@ However, the arrays can have varying lengths, not just limited to 4.
 
 export function binaryArrayToNumber(arr: number[]): number {
   return Number.parseInt(arr.join(""), 2);
-};
+}

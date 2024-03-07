@@ -11,8 +11,11 @@ duck_duck_goose([a, b, c, d], 4) should return d.name
 */
 
 public class Kata {
+
   public static String duckDuckGoose(Player[] players, int goose) {
     int position = goose % players.length;
-    return position == 0 ? players[players.length-1].name : players[position-1].name;
+    return position == 0
+      ? players[players.length - 1].name
+      : players[position - 1].name;
   }
 }

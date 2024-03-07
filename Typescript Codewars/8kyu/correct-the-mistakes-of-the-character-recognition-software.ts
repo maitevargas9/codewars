@@ -21,5 +21,5 @@ export function correct(s: string): string {
 
 // Solution 2
 export function correct2(s: string): string {
-  return s.replace(/1/g, 'I').replace(/5/g, 'S').replace(/0/g, 'O');
+  return s.replace(/1/g, "I").replace(/5/g, "S").replace(/0/g, "O");
 }

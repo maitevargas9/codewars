@@ -16,12 +16,11 @@ As usual, your function/method should be pure, i.e. it should not mutate the ori
 */
 
 export function toAlternatingCase(s: string): string {
-  let str = '';
+  let str = "";
   for (let i = 0; i < s.length; i++) {
-    if (s[i] == s[i].toLowerCase()) { 
+    if (s[i] == s[i].toLowerCase()) {
       str += s[i].toUpperCase();
-    } 
-    else {
+    } else {
       str += s[i].toLowerCase();
     }
   }

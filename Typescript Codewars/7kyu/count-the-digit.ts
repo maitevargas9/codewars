@@ -22,9 +22,9 @@ Note that 121 has twice the digit 1.
 export class G964 {
   public static nbDig(n: number, d: number): number {
     let count = 0;
-    for (let i = 0; i <= n; i++){
+    for (let i = 0; i <= n; i++) {
       let square = (i * i + "").split("");
-      square.forEach((s)=> s == d.toString() ? count += 1 : null)
+      square.forEach((s) => (s == d.toString() ? (count += 1) : null));
     }
     return count;
   }

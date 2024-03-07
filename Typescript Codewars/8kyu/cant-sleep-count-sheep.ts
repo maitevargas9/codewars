@@ -9,5 +9,8 @@ Input will always be valid, i.e. no negative integers.
 */
 
 export function countSheep(num: number): string {
-  return [...Array(num).keys()].reduce((res, i) => res + (i + 1) + ' sheep...', '');
+  return [...Array(num).keys()].reduce(
+    (res, i) => res + (i + 1) + " sheep...",
+    ""
+  );
 }

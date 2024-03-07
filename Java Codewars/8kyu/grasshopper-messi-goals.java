@@ -20,8 +20,8 @@ Create a fourth variable named totalGoals that stores the sum of all of Messi's 
 */
 
 class Goals {
-  final public static int laLigaGoals = 43,
-                          championsLeagueGoals = 10,
-                          copaDelReyGoals = 5,
-                          totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+
+  public static final int laLigaGoals = 43, championsLeagueGoals =
+    10, copaDelReyGoals = 5, totalGoals =
+    laLigaGoals + championsLeagueGoals + copaDelReyGoals;
 }

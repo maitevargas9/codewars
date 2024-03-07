@@ -24,7 +24,7 @@ export function SeriesSum(n: number): string {
       result = 1;
     } else {
       reverage += 3;
-      result = result + (1 / reverage);
+      result = result + 1 / reverage;
     }
   }
   return result.toFixed(2);

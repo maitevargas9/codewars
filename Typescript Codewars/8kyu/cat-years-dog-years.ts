@@ -19,7 +19,9 @@ Dog Years
 +5 dog years for each year after that
 */
 
-export function humanYearsCatYearsDogYears(humanYears: number): [number, number, number] {
+export function humanYearsCatYearsDogYears(
+  humanYears: number
+): [number, number, number] {
   let catYears = 0;
   let dogYears = 0;
   let count = 1;
@@ -28,13 +30,11 @@ export function humanYearsCatYearsDogYears(humanYears: number): [number, number,
       catYears += 15;
       dogYears += 15;
       count += 1;
-    }
-    else if (count === 2) {
+    } else if (count === 2) {
       catYears += 9;
       dogYears += 9;
       count += 1;
-    }
-    else if (count >= 3) {
+    } else if (count >= 3) {
       catYears += 4;
       dogYears += 5;
       count += 1;

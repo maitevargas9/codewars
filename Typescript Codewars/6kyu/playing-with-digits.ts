@@ -21,17 +21,17 @@ n = 46288; p = 3 ---> 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 
 */
 
 export class G964 {
-    public static digPow = (n: number, p: number) => {
-      let digits = Math.floor(Math.log10(n)) + p;                                         
-      let result = 0;
-      let num = n; 
-      while (digits >= p) {
-        result += Math.pow((num % 10),digits--); 
-        num = Math.floor(num / 10);
-      }
-      if (result % n === 0) {
-        return result / n;
-      }
-      return -1;
+  public static digPow = (n: number, p: number) => {
+    let digits = Math.floor(Math.log10(n)) + p;
+    let result = 0;
+    let num = n;
+    while (digits >= p) {
+      result += Math.pow(num % 10, digits--);
+      num = Math.floor(num / 10);
     }
+    if (result % n === 0) {
+      return result / n;
+    }
+    return -1;
+  };
 }

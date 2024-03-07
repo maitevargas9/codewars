@@ -26,7 +26,11 @@ The maximum product obtained from multiplying -2 * 7 = -14, and they're adjacent
 import static java.util.stream.IntStream.range;
 
 public class MaxProduct {
+
   public int adjacentElementsProduct(int[] array) {
-    return range(0, array.length - 1).map(i -> array[i] * array[i + 1]).max().orElse(0);
+    return range(0, array.length - 1)
+      .map(i -> array[i] * array[i + 1])
+      .max()
+      .orElse(0);
   }
 }

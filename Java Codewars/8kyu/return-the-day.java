@@ -13,9 +13,10 @@ Otherwise returns "Wrong, please enter a number between 1 and 7"
 */
 
 public class DayOfWeek {
+
   public static String getDay(int n) {
     var result = "";
-    switch(n) {
+    switch (n) {
       case 1:
         result = "Sunday";
         break;
@@ -27,13 +28,13 @@ public class DayOfWeek {
         break;
       case 4:
         result = "Wednesday";
-        break; 
+        break;
       case 5:
         result = "Thursday";
         break;
       case 6:
         result = "Friday";
-        break;  
+        break;
       case 7:
         result = "Saturday";
         break;

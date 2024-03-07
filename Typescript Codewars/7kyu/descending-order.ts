@@ -12,5 +12,5 @@ Input: 123456789 Output: 987654321
 */
 
 export function descendingOrder(n: number): number {
-  return parseInt((n+'').split('').sort().reverse().join(''));
+  return parseInt((n + "").split("").sort().reverse().join(""));
 }

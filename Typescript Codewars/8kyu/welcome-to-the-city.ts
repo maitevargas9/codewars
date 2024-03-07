@@ -10,6 +10,10 @@ Example
 This example will return the string Hello, John Smith! Welcome to Phoenix, Arizona!
 */
 
-export const sayHello = (name: string[], city: string, state: string): string => {
-  return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`;
-}
+export const sayHello = (
+  name: string[],
+  city: string,
+  state: string
+): string => {
+  return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`;
+};

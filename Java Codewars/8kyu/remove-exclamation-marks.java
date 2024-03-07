@@ -5,7 +5,8 @@ Write function RemoveExclamationMarks which removes all exclamation marks from a
 */
 
 class Solution {
-    static String removeExclamationMarks(String s) {
-      return s.replace("!", "");
-    }
+
+  static String removeExclamationMarks(String s) {
+    return s.replace("!", "");
+  }
 }

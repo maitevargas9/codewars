@@ -15,5 +15,7 @@ Since we cannot define keywords in Javascript (well, at least I don't know how t
 */
 
 export const xor = (a: boolean, b: boolean): boolean => {
-  return (a === true && b === false) || (a === false && b === true) ? true : false;
-}
+  return (a === true && b === false) || (a === false && b === true)
+    ? true
+    : false;
+};

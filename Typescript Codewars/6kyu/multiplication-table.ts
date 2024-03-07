@@ -13,13 +13,13 @@ For the given example, the return value should be
 */
 
 export function multiplicationTable(size: number): number[][] {
-    let result: number[][] = [];
-    for(let i = 1; i <= size; i++) {
-        let x: number[] = [];
-        for(let j = 1; j <= size; j++) {
-        x.push(i*j);
-        }
-        result.push(x);
+  let result: number[][] = [];
+  for (let i = 1; i <= size; i++) {
+    let x: number[] = [];
+    for (let j = 1; j <= size; j++) {
+      x.push(i * j);
     }
-    return result;
+    result.push(x);
+  }
+  return result;
 }

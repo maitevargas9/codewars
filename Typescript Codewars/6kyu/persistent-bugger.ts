@@ -14,7 +14,7 @@ export function persistence(num: number): number {
   let count = 0;
   while (n > 9) {
     count++;
-    n = [...String(n)].map(Number).reduce((a,v) => a*v, 1);
+    n = [...String(n)].map(Number).reduce((a, v) => a * v, 1);
   }
   return count;
 }

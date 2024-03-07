@@ -43,23 +43,22 @@ https://en.wikipedia.org/wiki/Prime_gap
 
 export const gap = (g: number, m: number, n: number): number[] | null => {
   let lastPrime = 0;
-  let isPrime = function(x: number) { 
-    for (let i = 2; i * i <= x; i++) { 
+  let isPrime = function (x: number) {
+    for (let i = 2; i * i <= x; i++) {
       if (x % i == 0) {
-        return false; 
+        return false;
       }
-    } 
+    }
     return true;
-  }
+  };
   for (let i = m; i <= n; i++) {
     if (isPrime(i)) {
       if (i - lastPrime == g) {
         return [lastPrime, i];
-      }
-      else {
+      } else {
         lastPrime = i;
       }
     }
   }
   return null;
-}
+};

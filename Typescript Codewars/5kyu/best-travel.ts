@@ -34,8 +34,14 @@ try not to modify the input list of distances ls
 in some languages this "list" is in fact a string (see the Sample Tests).
 */
 
-export function chooseBestSum(t: number, k: number, ls: number[]): number | null {
-  return (ls.reduce(
+export function chooseBestSum(
+  t: number,
+  k: number,
+  ls: number[]
+): number | null {
+  return (
+    ls
+      .reduce(
         (a: number[][], b: number) =>
           a.concat(
             a

@@ -6,6 +6,7 @@ Add the value "codewars" to the array websites 1,000 times.
 */
 
 public class KataExampleTwist {
+
   public static String[] kataExampleTwist() {
     String[] websites = new String[1000];
     java.util.Arrays.fill(websites, "codewars");

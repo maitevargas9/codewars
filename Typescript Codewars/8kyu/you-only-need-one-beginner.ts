@@ -8,4 +8,4 @@ Return true if the array contains the value, false if not.
 
 export const check = (a: (number | string)[], x: number | string): boolean => {
   return a.includes(x) ? true : false;
-}
+};

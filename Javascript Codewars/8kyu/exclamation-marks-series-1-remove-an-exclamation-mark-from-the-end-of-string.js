@@ -1,7 +1,8 @@
 /*
 Description
 
-Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, 
+no need to verify it.
 
 Examples
 "Hi!"     ---> "Hi"
@@ -12,6 +13,6 @@ Examples
 "Hi"      ---> "Hi"
 */
 
-function remove (string) {
+function remove(string) {
   return string.endsWith('!') ? string.split('').slice(0, string.split('').length - 1).join('') : string;
 }

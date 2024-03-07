@@ -11,9 +11,14 @@ Example
 { 1, 1, 11, 2, 3 } => 6
 
 Input validation
-If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
+If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list 
+with only 1 element, return 0.
 */
 
 export function sumArray(arr: number[] | null): number {
-  return arr != null && arr.length > 1 ? arr.reduce((acc, value) => acc + value, 0) - Math.min(...arr) - Math.max(...arr) : 0;
+  return arr != null && arr.length > 1
+    ? arr.reduce((acc, value) => acc + value, 0) -
+        Math.min(...arr) -
+        Math.max(...arr)
+    : 0;
 }

@@ -1,7 +1,8 @@
 /*
 Description
 
-Americans are odd people: in their buildings, the first floor is actually the ground floor and there is no 13th floor (due to superstition).
+Americans are odd people: in their buildings, the first floor is actually the ground floor and there 
+is no 13th floor (due to superstition).
 
 Write a function that given a floor in the american system returns the floor in the european system.
 With the 1st floor being replaced by the ground floor and the 13th floor being removed, the numbers 

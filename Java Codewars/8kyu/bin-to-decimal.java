@@ -5,7 +5,8 @@ Complete the function which converts a binary number (given as a string) to a de
 */
 
 public class Converter {
+
   public static int binToDecimal(String inp) {
-    return Integer.parseInt(inp, 2); 
+    return Integer.parseInt(inp, 2);
   }
 }

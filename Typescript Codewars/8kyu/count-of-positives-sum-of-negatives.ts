@@ -10,8 +10,12 @@ For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should r
 */
 
 export function countPositivesSumNegatives(input: any) {
-    return input != 0 && input.length > 1 ?
-        [input.filter((p: number) => p > 0).length,
-        input.filter((n: number) => n < 0).reduce((a: number, b: number) => a + b, 0)]
-        : [];
+  return input != 0 && input.length > 1
+    ? [
+        input.filter((p: number) => p > 0).length,
+        input
+          .filter((n: number) => n < 0)
+          .reduce((a: number, b: number) => a + b, 0),
+      ]
+    : [];
 }

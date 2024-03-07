@@ -2,7 +2,9 @@
 Description
 
 The Story
-Bob is working as a bus driver. However, he has become extremely popular amongst the city's residents. With so many passengers wanting to get aboard his bus, he sometimes has to face the problem of not enough space left on the bus! He wants you to write a simple program telling him if he will be able to fit all the passengers.
+Bob is working as a bus driver. However, he has become extremely popular amongst the city's residents. 
+With so many passengers wanting to get aboard his bus, he sometimes has to face the problem of not enough 
+space left on the bus! He wants you to write a simple program telling him if he will be able to fit all the passengers.
 
 Task Overview
 You have to write a function that accepts three parameters:
@@ -17,5 +19,5 @@ cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
 */
 
 export function enough(cap: number, on: number, wait: number): number {
-  return (on + wait > cap) ? on + wait - cap : 0;
+  return on + wait > cap ? on + wait - cap : 0;
 }

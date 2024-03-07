@@ -22,11 +22,11 @@ If you're unsure about the format, look at the sample tests.
 */
 
 export function multiTable(number: number): string {
-  let res = '';
-  for(let i = 1; i <= 10; i++) {
+  let res = "";
+  for (let i = 1; i <= 10; i++) {
     res += `${i} * ${number} = ${i * number}`;
-    if(i < 10) { 
-      res +='\n'; 
+    if (i < 10) {
+      res += "\n";
     }
   }
   return res;

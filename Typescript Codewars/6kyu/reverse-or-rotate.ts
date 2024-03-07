@@ -27,5 +27,14 @@ s = "123456" gives "234561".
 */
 
 export function revRot(s: string, sz: number): string {
-  return sz === 0 || sz > s.length ? '' : s.match(new RegExp(`.{${sz}}`, 'g'))!.map(c => c.match(/[13579]/g)?.length! % 2 ? c.replace(/^(.)(.*)$/, '$2$1') : c.split('').reverse().join('')).join('')
+  return sz === 0 || sz > s.length
+    ? ""
+    : s
+        .match(new RegExp(`.{${sz}}`, "g"))!
+        .map((c) =>
+          c.match(/[13579]/g)?.length! % 2
+            ? c.replace(/^(.)(.*)$/, "$2$1")
+            : c.split("").reverse().join("")
+        )
+        .join("");
 }

@@ -12,5 +12,5 @@ Note2 the input data can be: boolean array, array of objects, array of string ar
 */
 
 export function printArray(array: any[]) {
-  return array.join(',');
+  return array.join(",");
 }

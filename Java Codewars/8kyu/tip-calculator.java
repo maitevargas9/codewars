@@ -18,19 +18,21 @@ Because you're a nice person, you always round up the tip, regardless of the ser
 */
 
 public class TipCalculator {
+
   public static Integer calculateTip(double amount, String rating) {
-    switch(rating.toLowerCase()) {
-      case "terrible": 
+    switch (rating.toLowerCase()) {
+      case "terrible":
         return 0;
-      case "poor": 
+      case "poor":
         return (int) Math.ceil(amount * 0.05);
-      case "good": 
+      case "good":
         return (int) Math.ceil(amount * 0.1);
-      case "great": 
+      case "great":
         return (int) Math.ceil(amount * 0.15);
-      case "excellent": 
+      case "excellent":
         return (int) Math.ceil(amount * 0.2);
-      default: return null;      
+      default:
+        return null;
     }
   }
 }

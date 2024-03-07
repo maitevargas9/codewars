@@ -8,6 +8,6 @@ Example
 ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 */
 
-export function smash (words: string[]): string {
-  return words.join(' ');
-};
+export function smash(words: string[]): string {
+  return words.join(" ");
+}

@@ -11,5 +11,7 @@ Names given are always valid strings.
 */
 
 export function areYouPlayingBanjo(name: string): string {
-  return name.startsWith("R") || name.startsWith("r") ? name + " plays banjo" : name + " does not play banjo";
+  return name.startsWith("R") || name.startsWith("r")
+    ? name + " plays banjo"
+    : name + " does not play banjo";
 }
